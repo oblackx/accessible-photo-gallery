@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Photo Gallery - Nature Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="addTabFocus()">
+    <div class="container">
+        <header>
+            <h1>Accessible Photo Gallery</h1>
+            <p class="description">Nature Collection — Explore beautiful landscapes</p>
+        </header>
+
+        <main>
+            <section aria-label="Main image display">
+                <h2>Image Preview</h2>
+                <div id="image" class="main-image" role="img" aria-label="Hover or focus a thumbnail to display a larger preview">
+                    Hover over an image below to display here.
+                </div>
+            </section>
+
+            <section aria-label="Thumbnail gallery">
+                <h2>Gallery Thumbnails</h2>
+                <p class="instruction">Use mouse hover or keyboard navigation (Tab/Shift+Tab) to preview images.</p>
+                <div class="thumbnails" role="list">
+                    <img class="preview" role="listitem" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Snow-capped mountain peaks under clear blue sky" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                    <img class="preview" role="listitem" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop" alt="Golden sunset over calm ocean waters" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                    <img class="preview" role="listitem" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop" alt="Sunlight filtering through dense forest trees" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                    <img class="preview" role="listitem" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&h=300&fit=crop" alt="Rolling sand dunes in desert landscape" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                    <img class="preview" role="listitem" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=300&fit=crop" alt="Modern city skyline at twilight with lights" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                    <img class="preview" role="listitem" src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400&h=300&fit=crop" alt="Crystal clear lake reflecting mountain peaks" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Accessible Photo Gallery Project — Interactivity with JavaScript Course</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
